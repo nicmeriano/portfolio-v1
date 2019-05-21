@@ -1030,10 +1030,6 @@ template {
   background: rgba(255, 13, 13, 0.612);
 }
 
-html {
-  height: 100%;
-}
-
 body {
   height: 100%;
   background: #e7e6e6;
