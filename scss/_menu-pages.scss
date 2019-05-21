@@ -1,0 +1,454 @@
+
+// General
+
+
+
+.block-title {
+    text-transform: uppercase;
+    color: $blockTitle;
+    font-size: 1.7rem;
+    letter-spacing: 2.7px;
+    font-weight: 600;
+
+    &::after {
+        content: '';
+        width: 100%;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.228);
+        display: block;
+        margin: 1rem 0 2.5rem 0;
+    }
+}
+
+
+
+
+
+// ============================== PROFILE ==================================== 
+
+.block {
+
+    section {
+        // margin: 2rem auto;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+            margin: 2rem 0;
+            
+        }
+        
+    }
+}
+
+
+.intro {
+
+    .main-intro {
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 3.5rem;
+        letter-spacing: 2px;
+        color: $gray1;
+        
+
+        span {
+            color: red;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+
+    }
+
+    .about-me {
+        line-height: 2.5rem;
+        margin-top: 2rem;
+        color: $gray2;
+        // letter-spacing: 1.2px;
+        font-size: 1.1rem;
+        font-weight: 200;
+
+        span {
+            color: red;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+}
+
+.personal-info {
+    font-size: 1.1rem;
+    color: $gray2;
+    font-weight: 200;
+    letter-spacing: 1.2px;
+    
+    span {
+        color: $gray3;
+        font-weight: 400;
+    }
+
+    p {
+        padding: .5rem 0;
+    }
+
+    &::after {
+        visibility: hidden;
+    }
+}
+
+.skills {
+    
+    .skill-list {
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+        .skill {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 1rem 1.5rem;
+            
+            i {
+                font-size: 6rem;
+                color: rgba(128, 0, 0, 0.598);
+                transition: .3s ease all;
+                
+                &:hover {
+                    color: red;
+                }
+            }
+
+        }
+    }
+
+    &::after {
+        visibility: hidden;
+    }
+}
+
+.experience {
+
+    font-size: 1.1rem;
+    color: $gray2;
+    font-weight: 200;
+    letter-spacing: 1.2px;
+    line-height: 2.5rem;
+
+    .chk-projects {
+        margin-bottom: 1rem;
+        span {
+            color: red;
+            border: 1px solid rgba(255, 0, 0, 0.461);
+            cursor: pointer;
+            transition: all ease .3s;
+
+            &:hover {
+                background: red;
+                color: white;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .job {
+        padding: 1.5rem 0;
+    }
+
+    &::after {
+        visibility: hidden;
+    }
+}
+
+.education {
+    
+    color: $gray2;
+    
+    
+    line-height: 2.5rem;
+
+    .degree-wrapper *{
+        font-size: 1.1rem;
+        font-weight: 200;
+        letter-spacing: 1.2px;
+   
+    }
+
+    &::after {
+        visibility: hidden;
+    }
+}
+
+
+
+
+// ============================== Portfolio ==================================== 
+
+.projects-filter {
+    padding: 2rem 0;
+
+    .filters {
+        display: flex;
+
+        .filter {
+            margin-right: 1rem;
+            color: $secondaryTxt;
+            transition: all .3s ease;
+
+            &:hover {
+                color: initial;
+                cursor: pointer;
+                
+            }
+        }
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    // width: 100%;
+    
+    
+
+    .project {
+        color: white;
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 450px;
+        margin: 1rem;
+        // background: url("https://source.unsplash.com/random/800x500") center no-repeat;
+        // background-size: cover;
+        background: rgb(230, 185, 89);
+        box-shadow: 0px 8px 25px -8px rgba(0,0,0,0.75);
+        transition: all .3s ease;
+        position: relative;
+
+        .project-overlay {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100%;
+            background: rgb(31, 31, 31);
+            transition: all .3s ease;
+            opacity: 0;
+            text-align: center;
+
+            .description {
+                font-size: 1.3rem;
+                margin-bottom: 4rem;
+                line-height: 30px;
+                padding: 0 1rem;
+
+                
+            }
+
+            .project-buttons {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                
+                
+                
+                .project-btn {
+                    padding: 1rem;
+                    background: rgb(116, 116, 116);
+                    border-radius: 20px;
+
+                    &:first-child {
+                        margin-right: 1rem;
+                    }
+                    &:nth-child(2) {
+                        margin-left: 1rem;
+                        
+                    }
+
+                    &:hover {
+                        background: rgb(255, 89, 0);
+                    }
+                    
+                    
+                }
+
+
+            }
+
+        }
+
+        &:hover {
+            
+            // background: rgba(104, 104, 247, 0.653);
+            .project-overlay {
+                opacity: .9;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// ============================== Blog =======================================
+
+.blog-post {
+    text-align: center;
+    padding: 0 0;
+    margin: 1rem auto 3rem auto;
+    box-shadow: 0px 3px 6px -1px rgba(125, 125, 125, 0.262);
+    max-width: 700px;
+    // position: relative;
+
+    
+
+    .post-img {
+        max-width: 100%;
+        padding-bottom: 2.5rem;
+
+    }
+
+    .post-title {
+        color: $secondaryColor;
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+        font-weight: 500;
+        font-size: 1.6rem;
+        letter-spacing: 1.5px;
+
+    }
+
+    .post-info {
+        color: $placeholder;
+        font-weight: 300;
+        font-size: .9rem;
+        
+
+        &::after {
+            content: '';
+            width: 7%;
+            border-bottom: $secondaryColor 2px solid;
+            display: block;
+            color: red;
+            font-size: 1rem;
+            margin: 2rem auto 2.2rem auto;
+        }
+    }
+
+    .post-abstract {
+        color: $placeholder;
+        font-size: 1.15rem;
+        font-weight: 300;
+        line-height: 2rem;
+        padding: 0 1.5rem 2rem 1.5rem;
+    }
+
+    button {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+}
+
+// ============================== Contact ==================================== 
+
+.input-wrapper {
+    
+    margin: 1rem 0;
+    input, textarea {
+        width: 100%;
+        margin-bottom: .6rem;
+        border: none;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.646);
+        height: 2.2rem;
+        padding-left: .8rem;
+        letter-spacing: 1.5px;
+        font-size: 1rem;
+        font-weight: 100;
+        
+
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: $placeholder;
+        }
+    }
+
+    p {
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: $secondaryTxt;
+        margin-bottom: 2rem;
+    }
+
+    textarea {
+        height: 20rem;
+    }
+
+ 
+}
+
+.contact-me {
+    letter-spacing: 1.2px;
+    line-height: 25px;
+    font-size: 1.1rem;
+    color: $gray1;
+    padding: 0 .2rem 2rem .2rem;
+}
+
+.submit-btn {
+    background: #333;
+    border: none;
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: #fff;
+        transform: scale(1.1);
+        color: rgb(43, 43, 43);
+        border: 1px solid #333;
+
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.alert {
+    text-align: center;
+    padding: 1rem;
+    background: #79c879;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+

@@ -1,0 +1,464 @@
+//mobile
+
+@media screen and (min-width: 775px) {
+  .block-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .menu-nav {
+    .menu-navbar-items {
+      .menu-item {
+        padding: 0.6rem 0.5rem;
+        .navbar-link {
+          font-size: 0.9rem;
+        }
+        .close {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    overflow-y: auto;
+  }
+
+  .grid {
+    position: relative;
+
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    max-width: 680px;
+    margin: 0 auto;
+    height: 60%;
+    transform: none;
+    grid-row-gap: 1rem;
+    grid-template: auto repeat(4, 1fr) / 1fr;
+    grid-template-areas:
+      "m"
+      "a"
+      "p"
+      "b"
+      "c";
+
+    .main-box-text {
+      padding-top: 1rem;
+      margin-bottom: 2.5rem;
+
+      .name {
+        font-size: 2.8rem;
+        text-shadow: none;
+
+        span {
+          font-size: 1.5rem;
+          font-weight: 200;
+          margin-bottom: 0.2rem;
+        }
+      }
+      .profession {
+        margin-top: 0.5rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+      }
+
+      .btn-social-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .btn {
+        padding: 1rem;
+        text-align: center;
+        width: 70%;
+        font-size: 0.9rem;
+        font-weight: 300;
+        border-radius: 10px;
+        border: none;
+        position: relative;
+        top: 1.4rem;
+        // top: .5rem;
+      }
+
+      .social {
+        // display: none;
+        padding-left: 0.3rem;
+        padding-bottom: 0rem;
+        font-size: 1.3rem;
+
+        .social-link {
+          &:hover {
+            background: none;
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+
+    .about-box,
+    .portfolio-box,
+    .blog-box,
+    .contact-box {
+      border-top: 1px solid $borderColor;
+      cursor: pointer;
+      .box-text-container {
+        font-size: 0.8rem;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+
+  .box-text-container {
+    h2 {
+      padding-left: 0.6rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    &::before {
+      border-bottom: none;
+      font-size: 0.8rem;
+      font-weight: 200;
+      padding-bottom: 0.5rem;
+      padding-left: 0.6rem;
+    }
+  }
+
+  .grid * {
+    @include reset;
+  }
+}
+
+@media screen and (min-width: 846px) and (max-width: 950px) {
+  .grid {
+    padding: 1rem 3rem;
+    height: 70%;
+    max-width: 100%;
+
+    .main-box-text {
+      .btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 2px;
+      }
+      .btn-social-wrapper {
+        flex-direction: column;
+      }
+      .social {
+        margin-top: 5rem;
+        display: flex;
+
+        .social-link {
+          border: 2px solid rgba(255, 255, 255, 0.502);
+          margin-right: 1rem;
+          font-size: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .about-box,
+    .portfolio-box,
+    .blog-box,
+    .contact-box {
+      .box-text-container {
+        padding: 2.2rem 2.5rem;
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+//--------remove hover effect for smaller devices----------------
+
+@media screen and (min-width: 951px) and (max-width: 3000px) {
+  .hover-box:hover {
+    border: 1rem solid rgba(203, 201, 201, 0.158);
+    background: $secondaryOverlay;
+    cursor: pointer;
+  }
+}
+
+// desktop view
+
+@media screen and (min-width: 951px) and (max-width: 1199px) and (min-height: 901px) {
+  .grid {
+    // grid-template: 400px 400px repeat(3, 380px) / 400px 400px 500px 500px;
+    grid-template: 350px 350px repeat(3, 350px) / 350px 350px 350px 350px;
+
+    grid-template-areas:
+      "m m . ."
+      "m m . ."
+      "c b a ."
+      ". . p ."
+      ". . . .";
+
+    left: -9rem;
+    top: -5rem;
+    .main-box-text {
+      .name {
+        font-size: 2.6rem;
+        span {
+          font-size: 1.2rem;
+        }
+      }
+      .profession {
+        font-size: 1.3rem;
+      }
+      .btn {
+        padding: 0.9rem 1.1rem;
+      }
+    }
+    .about-box,
+    .portfolio-box {
+      top: -35.3rem;
+    }
+    .contact-box,
+    .blog-box {
+      top: 0;
+    }
+
+    .box-text-container {
+      font-size: 1rem;
+    }
+
+    .contact-container {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) and (min-height: 901px) {
+  .grid {
+    left: -10rem;
+    top: 0;
+    grid-template: 400px 400px repeat(3, 380px) / 400px 400px 400px 450px;
+    grid-template-areas:
+      "m m . ."
+      "m m . ."
+      ". c a ."
+      ". . p ."
+      ". . b .";
+
+    .contact-box {
+      top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 2000px) and (min-height: 901px) {
+  .grid {
+    top: 0;
+    left: 10rem;
+    grid-template-areas:
+      "m m . ."
+      "m m . ."
+      ". c a ."
+      ". . p ."
+      ". . b .";
+  }
+  .contact-box {
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .grid {
+    top: 0;
+    // left: 10rem;
+    // grid-template: 400px 400px 380px 430px 380px / 400px 400px 500px 500px;
+  }
+}
+
+//height media query
+
+@media screen and (min-width: 951px) and (max-width: 1300px) and (max-height: 900px) {
+  .grid {
+    top: -12rem;
+    left: -9rem;
+    grid-template: 350px 350px 300px repeat(2, 250px) / 350px 350px 300px 350px;
+    grid-template-areas:
+      "m m . ."
+      "m m . ."
+      ". c a ."
+      ". . p ."
+      ". . b .";
+    .main-box-text {
+      .name {
+        font-size: 2.6rem;
+        span {
+          font-size: 1.2rem;
+        }
+      }
+      .profession {
+        font-size: 1.3rem;
+      }
+      .btn {
+        padding: 0.9rem 1.1rem;
+      }
+    }
+    .about-box,
+    .portfolio-box,
+    .blog-box {
+      top: -25.3rem;
+    }
+    .contact-box {
+      top: 0;
+    }
+
+    .box-text-container {
+      font-size: 1rem;
+    }
+
+    .contact-container {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1440px) and (max-height: 900px) {
+  .grid {
+    top: -7rem;
+    left: -15rem;
+    grid-template: 400px 400px 300px 300px 300px / 400px 400px 350px 350px;
+    grid-template-areas:
+      "m m . ."
+      "m m . ."
+      ". . a c"
+      ". . p ."
+      ". . b .";
+    .main-box-text {
+      .name {
+        font-size: 2.6rem;
+        span {
+          font-size: 1.2rem;
+        }
+      }
+      .profession {
+        font-size: 1.3rem;
+      }
+      .btn {
+        padding: 0.9rem 1.1rem;
+      }
+    }
+    .about-box,
+    .portfolio-box,
+    .blog-box {
+      top: -25.3rem;
+    }
+    .contact-box {
+      top: 0;
+      .contact-container {
+        top: 50%;
+      }
+    }
+
+    .box-text-container {
+      font-size: 1rem;
+    }
+
+    .contact-container {
+      bottom: 0;
+      right: 0;
+    }
+
+    .blog-container {
+      left: 7rem;
+    }
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .container {
+    .grid {
+      // @include reset;
+
+      position: fixed;
+      left: -30rem;
+      top: -30rem;
+
+      max-height: 100%;
+      grid-template: 800px 800px repeat(3, 800px) / 800px 800px repeat(2, 900px);
+      grid-template-areas:
+        "m m . ."
+        "m m . ."
+        ". . a c"
+        ". . p ."
+        ". . b .";
+      .main-box-text {
+        .name {
+          font-size: 5rem;
+          span {
+            font-size: 3rem;
+          }
+        }
+        .profession {
+          font-size: 2.5rem;
+          padding-bottom: 2rem;
+        }
+        .btn {
+          padding: 2rem 2.5rem;
+          font-size: 1.5rem;
+        }
+        .social-link {
+          font-size: 1.5rem;
+          padding: 2rem;
+        }
+      }
+      .about-box,
+      .portfolio-box,
+      .blog-box {
+        top: -78.3rem;
+      }
+      .contact-box {
+        top: 0;
+        .contact-container {
+          top: 60%;
+        }
+      }
+
+      .box-text-container {
+        font-size: 2rem;
+      }
+
+      .contact-container {
+        bottom: 0;
+        right: 0;
+      }
+
+      .blog-container {
+        left: 35%;
+      }
+    }
+  }
+}
+
+// MENU OVERLAY
+
+@media screen and (min-width: 951px) {
+  .active {
+    display: flex;
+    .side-name-panel {
+      display: flex;
+    }
+  }
+}
+
+// PORTFOLIO SECTION
+// @media screen and (min-width: 645px) {
+//   .projects {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }

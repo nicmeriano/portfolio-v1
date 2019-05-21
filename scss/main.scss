@@ -1,0 +1,247 @@
+@import "reset";
+@import "vars";
+@import "keyframes";
+@import "mixins";
+@import "menu";
+@import "menu-pages";
+@import "fonts";
+
+
+
+/* GLOBAL */
+
+*::selection {
+  background: $selection;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: rgb(231, 230, 230);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $primaryColor;
+  transition: all ease 0.5s;
+}
+
+/* ---------------------- BACKGROUND --------------------------------*/
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: url("../img/img2.jpg") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  position: fixed;
+  z-index: 0;
+  
+  .background-overlay {
+    background: $primaryOverlay;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    position: fixed;
+  }
+}
+
+
+/* --------------------------- GRID -------------------------------------- */
+
+
+
+.grid {
+  
+  display: grid;
+  width: 100%;
+  height: 1000px;
+  max-width: 1000px;
+  position: absolute;
+  top: -20%;
+  left: 10%;
+  transition: all ease 0.5s;
+  transition: opacity .3s;
+  transform: rotate(-34deg);
+  grid-template: 400px 400px repeat(3, 380px) / 400px 400px 500px 500px;
+  grid-template-areas:
+    "m m . ."
+    "m m . ."
+    ". . a ."
+    ". . p ."
+    ". . b c";
+
+
+  }
+  .box {
+    animation: 1s ease 0s 1 slideInFromBottom;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: $primaryColor;
+    text-transform: uppercase;
+    position: relative;
+    transition: ease 0.5s;
+  }
+
+
+
+
+/* Non-main boxes */
+
+.box-text-container {
+  transform: rotate(34deg);
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  letter-spacing: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.box-text-container::before {
+  content: "01";
+  width: 4rem;
+  display: block;
+  position: relative;
+  right: 1rem;
+  font-size: 0.8rem;
+  color: $primaryColor;
+  border-bottom: 1px solid #fff;
+}
+
+
+
+.about-box,
+.portfolio-box,
+.blog-box {
+  top: -40rem;
+}
+
+.about,
+.portfolio,
+.blog,
+.contact {
+  font-weight: 400;
+}
+
+/* Main */
+
+.main-box {
+  grid-area: m;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-box-text {
+
+  transform: rotate(34deg);
+  position: relative;
+  right: 8rem;
+  top: 5rem;
+  letter-spacing: 0.2rem;
+  padding: 1rem;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-shadow: 0px 3px 6px rgba(66, 66, 66, 0.92);
+}
+
+.name span {
+  text-transform: none;
+  display: block;
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.profession {
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.btn {
+  background: #333;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 0.9rem;
+  &:hover {
+    background: $btnHoverColor;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+}
+
+.social {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.social-link {
+  border: 1px solid #fff;
+  padding: 1rem;
+  margin-right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link:hover {
+  background: #fff;
+  color: #333;
+}
+
+/* About */
+
+.about-box {
+  grid-area: a;
+}
+
+/* Portfolio */
+
+.portfolio-box {
+  grid-area: p;
+}
+
+.portfolio-container::before {
+  content: "02";
+}
+
+/* Blog */
+.blog-box {
+  grid-area: b;
+}
+
+.blog-container::before {
+  content: "03";
+}
+
+/* Contact */
+.contact-box {
+  grid-area: c;
+  bottom: 50rem;
+}
+
+.contact-container::before {
+  content: "04";
+}
+
+
+
+
+
+
+@import "media";
